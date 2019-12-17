@@ -1,0 +1,45 @@
+@import './Variables.scss';
+
+@mixin styledForm {
+	background-color: inherit;
+	border: none;
+	color: $theme-green;
+	transition: 0.25s ease-in-out;
+	&:focus {
+		outline: none;
+	}
+}
+@mixin styledFormInput() {
+	font-size: 18px;
+	border-bottom: 1px solid $theme-green;
+	&-toggled {
+		color: $theme-red;
+		border-color: $theme-red;
+	}
+}
+
+.form {
+	display: flex;
+	width: 700px;
+	height: 40px;
+	&__description {
+		@include styledForm;
+		@include styledFormInput;
+		flex-basis: 80%;
+	}
+	&__value {
+		@include styledForm;
+		@include styledFormInput;
+		flex-basis: 15%;
+		margin: 0 10px;
+	}
+	&__submit {
+		@include styledForm;
+		flex-basis: 5%;
+		font-size: 30px;
+		padding: 0;
+		&-toggled {
+			color: $theme-red;
+		}
+	}
+}

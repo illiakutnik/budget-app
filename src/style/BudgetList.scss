@@ -1,0 +1,87 @@
+@import './Variables.scss';
+
+.budgetList {
+	display: flex;
+	justify-content: space-between;
+	width: 1000px;
+	margin-top: 20px;
+}
+.income {
+	flex-basis: 45%;
+	&__title {
+		color: $theme-green;
+	}
+	&__list {
+		list-style: none;
+		padding-inline-start: 0;
+	}
+}
+.expenses {
+	flex-basis: 45%;
+	&__title {
+		color: $theme-red;
+	}
+	&__list {
+		list-style: none;
+		padding-inline-start: 0;
+	}
+}
+.listItem {
+	display: flex;
+	padding: 25px 15px;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+	&__description {
+		flex-grow: 1;
+		color: #fff;
+		font-size: 20px;
+	}
+	&__percentage {
+		color: #fff;
+		padding: 2px 4px;
+		border-radius: 8px;
+		font-size: 14px;
+		background-color: $theme-red;
+		opacity: 0.6;
+		transition: all 0.3s;
+		transform: translateX(25px);
+	}
+	&__value {
+		color: $theme-green;
+		font-size: 20px;
+		margin-left: 10px;
+		transition: all 0.3s;
+		transform: translateX(25px);
+		&-expenses {
+			color: $theme-red;
+		}
+	}
+
+	&__btn {
+		transition: all 0.3s;
+		opacity: 0;
+		visibility: hidden;
+		background-color: inherit;
+		border: none;
+		outline: none;
+		font-size: 18px;
+		color: $theme-red;
+		cursor: pointer;
+	}
+	&:hover &__btn {
+		opacity: 1;
+		visibility: visible;
+	}
+	&:hover &__value {
+		transform: translateX(-5px);
+	}
+	&:hover &__percentage {
+		transform: translateX(-5px);
+	}
+}
+.incomeColor {
+	color: $theme-green;
+}
+.expensesColor {
+	color: $theme-red;
+}

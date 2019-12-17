@@ -1,0 +1,62 @@
+@import './Variables.scss';
+
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 30%;
+	margin: 30px;
+	text-align: center;
+	justify-content: center;
+	color: white;
+	&__toggle {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		&-income {
+			color: $theme-green;
+			font-size: 20px;
+		}
+		&-expenses {
+			color: $theme-red;
+			font-size: 20px;
+		}
+	}
+	&__month {
+		font-size: 30px;
+	}
+	&__sum {
+		font-size: 65px;
+		margin-block-start: 0;
+	}
+}
+.toggle {
+	width: 60px;
+	height: 30px;
+	background: $theme-green;
+	border-radius: 30px;
+	padding: 5px;
+	transition: 0.25s ease-in-out;
+	align-self: center;
+	cursor: pointer;
+	&-toggled {
+		background-color: $theme-red;
+	}
+	&__circle {
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		background: white;
+		transition: 0.25s ease-in-out;
+		&-toggled {
+			margin-left: 30px;
+		}
+	}
+}
+.percentage {
+	color: white;
+	padding: 2px 0;
+	border-radius: 20px;
+	font-size: 16px;
+	background-color: $theme-red;
+	opacity: 0.6;
+}
